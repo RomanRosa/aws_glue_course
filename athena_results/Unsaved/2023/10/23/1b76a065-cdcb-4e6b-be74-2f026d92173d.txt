@@ -1,0 +1,396 @@
+Query Plan
+{
+  "id" : "6",
+  "name" : "Output",
+  "descriptor" : {
+    "columnNames" : "[customerid, namestyle, title, firstname, middlename, lastname, suffix, companyname, salesperson, emailaddress, phone, passwordhash, passwordsalt, rowguid, modifieddate, dataload]"
+  },
+  "outputs" : [ {
+    "symbol" : "customerid",
+    "type" : "bigint"
+  }, {
+    "symbol" : "namestyle",
+    "type" : "boolean"
+  }, {
+    "symbol" : "title",
+    "type" : "varchar"
+  }, {
+    "symbol" : "firstname",
+    "type" : "varchar"
+  }, {
+    "symbol" : "middlename",
+    "type" : "varchar"
+  }, {
+    "symbol" : "lastname",
+    "type" : "varchar"
+  }, {
+    "symbol" : "suffix",
+    "type" : "varchar"
+  }, {
+    "symbol" : "companyname",
+    "type" : "varchar"
+  }, {
+    "symbol" : "salesperson",
+    "type" : "varchar"
+  }, {
+    "symbol" : "emailaddress",
+    "type" : "varchar"
+  }, {
+    "symbol" : "phone",
+    "type" : "varchar"
+  }, {
+    "symbol" : "passwordhash",
+    "type" : "varchar"
+  }, {
+    "symbol" : "passwordsalt",
+    "type" : "varchar"
+  }, {
+    "symbol" : "rowguid",
+    "type" : "varchar"
+  }, {
+    "symbol" : "modifieddate",
+    "type" : "varchar"
+  }, {
+    "symbol" : "dataload",
+    "type" : "varchar"
+  } ],
+  "details" : [ ],
+  "estimates" : [ {
+    "outputRowCount" : 10.0,
+    "outputSizeInBytes" : 7810.0,
+    "cpuCost" : 0.0,
+    "memoryCost" : 0.0,
+    "networkCost" : 0.0
+  } ],
+  "children" : [ {
+    "id" : "101",
+    "name" : "Limit",
+    "descriptor" : {
+      "count" : "10",
+      "withTies" : "",
+      "inputPreSortedBy" : "[]"
+    },
+    "outputs" : [ {
+      "symbol" : "customerid",
+      "type" : "bigint"
+    }, {
+      "symbol" : "namestyle",
+      "type" : "boolean"
+    }, {
+      "symbol" : "title",
+      "type" : "varchar"
+    }, {
+      "symbol" : "firstname",
+      "type" : "varchar"
+    }, {
+      "symbol" : "middlename",
+      "type" : "varchar"
+    }, {
+      "symbol" : "lastname",
+      "type" : "varchar"
+    }, {
+      "symbol" : "suffix",
+      "type" : "varchar"
+    }, {
+      "symbol" : "companyname",
+      "type" : "varchar"
+    }, {
+      "symbol" : "salesperson",
+      "type" : "varchar"
+    }, {
+      "symbol" : "emailaddress",
+      "type" : "varchar"
+    }, {
+      "symbol" : "phone",
+      "type" : "varchar"
+    }, {
+      "symbol" : "passwordhash",
+      "type" : "varchar"
+    }, {
+      "symbol" : "passwordsalt",
+      "type" : "varchar"
+    }, {
+      "symbol" : "rowguid",
+      "type" : "varchar"
+    }, {
+      "symbol" : "modifieddate",
+      "type" : "varchar"
+    }, {
+      "symbol" : "dataload",
+      "type" : "varchar"
+    } ],
+    "details" : [ ],
+    "estimates" : [ {
+      "outputRowCount" : 10.0,
+      "outputSizeInBytes" : 7810.0,
+      "cpuCost" : 7810.0,
+      "memoryCost" : 0.0,
+      "networkCost" : 0.0
+    } ],
+    "children" : [ {
+      "id" : "182",
+      "name" : "LocalExchange",
+      "descriptor" : {
+        "partitioning" : "SINGLE",
+        "isReplicateNullsAndAny" : "",
+        "hashColumn" : "[]",
+        "arguments" : "[]"
+      },
+      "outputs" : [ {
+        "symbol" : "customerid",
+        "type" : "bigint"
+      }, {
+        "symbol" : "namestyle",
+        "type" : "boolean"
+      }, {
+        "symbol" : "title",
+        "type" : "varchar"
+      }, {
+        "symbol" : "firstname",
+        "type" : "varchar"
+      }, {
+        "symbol" : "middlename",
+        "type" : "varchar"
+      }, {
+        "symbol" : "lastname",
+        "type" : "varchar"
+      }, {
+        "symbol" : "suffix",
+        "type" : "varchar"
+      }, {
+        "symbol" : "companyname",
+        "type" : "varchar"
+      }, {
+        "symbol" : "salesperson",
+        "type" : "varchar"
+      }, {
+        "symbol" : "emailaddress",
+        "type" : "varchar"
+      }, {
+        "symbol" : "phone",
+        "type" : "varchar"
+      }, {
+        "symbol" : "passwordhash",
+        "type" : "varchar"
+      }, {
+        "symbol" : "passwordsalt",
+        "type" : "varchar"
+      }, {
+        "symbol" : "rowguid",
+        "type" : "varchar"
+      }, {
+        "symbol" : "modifieddate",
+        "type" : "varchar"
+      }, {
+        "symbol" : "dataload",
+        "type" : "varchar"
+      } ],
+      "details" : [ ],
+      "estimates" : [ {
+        "outputRowCount" : 10.0,
+        "outputSizeInBytes" : 7810.0,
+        "cpuCost" : 0.0,
+        "memoryCost" : 0.0,
+        "networkCost" : 0.0
+      } ],
+      "children" : [ {
+        "id" : "149",
+        "name" : "RemoteExchange",
+        "descriptor" : {
+          "partitionCount" : "",
+          "type" : "GATHER",
+          "isReplicateNullsAndAny" : "",
+          "hashColumn" : "[]"
+        },
+        "outputs" : [ {
+          "symbol" : "customerid",
+          "type" : "bigint"
+        }, {
+          "symbol" : "namestyle",
+          "type" : "boolean"
+        }, {
+          "symbol" : "title",
+          "type" : "varchar"
+        }, {
+          "symbol" : "firstname",
+          "type" : "varchar"
+        }, {
+          "symbol" : "middlename",
+          "type" : "varchar"
+        }, {
+          "symbol" : "lastname",
+          "type" : "varchar"
+        }, {
+          "symbol" : "suffix",
+          "type" : "varchar"
+        }, {
+          "symbol" : "companyname",
+          "type" : "varchar"
+        }, {
+          "symbol" : "salesperson",
+          "type" : "varchar"
+        }, {
+          "symbol" : "emailaddress",
+          "type" : "varchar"
+        }, {
+          "symbol" : "phone",
+          "type" : "varchar"
+        }, {
+          "symbol" : "passwordhash",
+          "type" : "varchar"
+        }, {
+          "symbol" : "passwordsalt",
+          "type" : "varchar"
+        }, {
+          "symbol" : "rowguid",
+          "type" : "varchar"
+        }, {
+          "symbol" : "modifieddate",
+          "type" : "varchar"
+        }, {
+          "symbol" : "dataload",
+          "type" : "varchar"
+        } ],
+        "details" : [ ],
+        "estimates" : [ {
+          "outputRowCount" : 10.0,
+          "outputSizeInBytes" : 7810.0,
+          "cpuCost" : 0.0,
+          "memoryCost" : 0.0,
+          "networkCost" : 7810.0
+        } ],
+        "children" : [ {
+          "id" : "148",
+          "name" : "LimitPartial",
+          "descriptor" : {
+            "count" : "10",
+            "withTies" : "",
+            "inputPreSortedBy" : "[]"
+          },
+          "outputs" : [ {
+            "symbol" : "customerid",
+            "type" : "bigint"
+          }, {
+            "symbol" : "namestyle",
+            "type" : "boolean"
+          }, {
+            "symbol" : "title",
+            "type" : "varchar"
+          }, {
+            "symbol" : "firstname",
+            "type" : "varchar"
+          }, {
+            "symbol" : "middlename",
+            "type" : "varchar"
+          }, {
+            "symbol" : "lastname",
+            "type" : "varchar"
+          }, {
+            "symbol" : "suffix",
+            "type" : "varchar"
+          }, {
+            "symbol" : "companyname",
+            "type" : "varchar"
+          }, {
+            "symbol" : "salesperson",
+            "type" : "varchar"
+          }, {
+            "symbol" : "emailaddress",
+            "type" : "varchar"
+          }, {
+            "symbol" : "phone",
+            "type" : "varchar"
+          }, {
+            "symbol" : "passwordhash",
+            "type" : "varchar"
+          }, {
+            "symbol" : "passwordsalt",
+            "type" : "varchar"
+          }, {
+            "symbol" : "rowguid",
+            "type" : "varchar"
+          }, {
+            "symbol" : "modifieddate",
+            "type" : "varchar"
+          }, {
+            "symbol" : "dataload",
+            "type" : "varchar"
+          } ],
+          "details" : [ ],
+          "estimates" : [ {
+            "outputRowCount" : 10.0,
+            "outputSizeInBytes" : 7810.0,
+            "cpuCost" : 7810.0,
+            "memoryCost" : 0.0,
+            "networkCost" : 0.0
+          } ],
+          "children" : [ {
+            "id" : "0",
+            "name" : "TableScan",
+            "descriptor" : {
+              "table" : "awsdatacatalog:customers_database:customers_csv"
+            },
+            "outputs" : [ {
+              "symbol" : "customerid",
+              "type" : "bigint"
+            }, {
+              "symbol" : "namestyle",
+              "type" : "boolean"
+            }, {
+              "symbol" : "title",
+              "type" : "varchar"
+            }, {
+              "symbol" : "firstname",
+              "type" : "varchar"
+            }, {
+              "symbol" : "middlename",
+              "type" : "varchar"
+            }, {
+              "symbol" : "lastname",
+              "type" : "varchar"
+            }, {
+              "symbol" : "suffix",
+              "type" : "varchar"
+            }, {
+              "symbol" : "companyname",
+              "type" : "varchar"
+            }, {
+              "symbol" : "salesperson",
+              "type" : "varchar"
+            }, {
+              "symbol" : "emailaddress",
+              "type" : "varchar"
+            }, {
+              "symbol" : "phone",
+              "type" : "varchar"
+            }, {
+              "symbol" : "passwordhash",
+              "type" : "varchar"
+            }, {
+              "symbol" : "passwordsalt",
+              "type" : "varchar"
+            }, {
+              "symbol" : "rowguid",
+              "type" : "varchar"
+            }, {
+              "symbol" : "modifieddate",
+              "type" : "varchar"
+            }, {
+              "symbol" : "dataload",
+              "type" : "varchar"
+            } ],
+            "details" : [ "firstname := firstname:string:REGULAR", "namestyle := namestyle:boolean:REGULAR", "middlename := middlename:string:REGULAR", "modifieddate := modifieddate:string:REGULAR", "emailaddress := emailaddress:string:REGULAR", "passwordsalt := passwordsalt:string:REGULAR", "title := title:string:REGULAR", "suffix := suffix:string:REGULAR", "rowguid := rowguid:string:REGULAR", "lastname := lastname:string:REGULAR", "salesperson := salesperson:string:REGULAR", "phone := phone:string:REGULAR", "companyname := companyname:string:REGULAR", "customerid := customerid:bigint:REGULAR", "passwordhash := passwordhash:string:REGULAR", "dataload := dataload:string:PARTITION_KEY" ],
+            "estimates" : [ {
+              "outputRowCount" : "NaN",
+              "outputSizeInBytes" : "NaN",
+              "cpuCost" : "NaN",
+              "memoryCost" : 0.0,
+              "networkCost" : 0.0
+            } ],
+            "children" : [ ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}
